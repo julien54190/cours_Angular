@@ -1,0 +1,18 @@
+<div
+  style="height: 100vh; padding-top: 150px;"
+  class="d-flex flex-column container"
+  >
+  <ul class="list-primary">
+    <li>Pierre</li>
+    <!-- <li class="hello" color="green" appColor>Paul</li> -->
+    <!-- <li class="hello" appColor="green">Paul</li> -->
+    <li class="hello" [appColor]="{color: 'green', backgroundColor: 'tomato'}">Paul</li>
+    <li>Jacques</li>
+  </ul>
+
+  <button *appIf="false">Hello</button>
+
+  <!-- <ng-template [ngIf]="false">
+    <button>Hello</button>
+  </ng-template> -->
+</div>

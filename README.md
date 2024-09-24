@@ -3,6 +3,7 @@
 # 01.composant_template-data-binding
 
 # 02.approffondissment_Composant
+
 - 01.Communication entre les composants
 - 02.Propriété_Input
 - 03.proriete_output
@@ -12,4 +13,14 @@
 - 07.Les ng-content
 - 08.ContentChild
 - 09.cycle_composant
+
+# 03.Approfondissement_directive
+
+- 01.Objectifs
+- 02.Directive d'attribut
+- 03.Hostlistener
+- 04.Hostbinding
+- 05.Liaison de propriétés et directive
+- 06.Directive structurelle
+
 
