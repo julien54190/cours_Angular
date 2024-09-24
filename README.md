@@ -75,6 +75,15 @@
 - 04.Pipes purs et impurs
 - 05.Le pipe asynchrone
 
+# 09.requette_HTTP
+
+- 01.Introduction aux requêtes http
+- 02.Utilisation de RestAPI
+- 03.Faire des requêtes HTTP Get et Post
+- 04.Faire des requêtes HTTP Put et Delete
+- 05.Headers et gestion d
+- 06.Usages  avancés
+
 
 
 
