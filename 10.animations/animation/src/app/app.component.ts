@@ -1,4 +1,4 @@
-import { animate, group, keyframes, state, style, transition, trigger } from '@angular/animations';
+import { animate, group, keyframes, query, stagger, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 
 @Component({
@@ -53,7 +53,16 @@ import { Component } from '@angular/core';
         })),
       ])
       )
-    ])
+    ]),
+    trigger("list", [
+      transition(":enter", query('li', [
+        style({
+          opacity: 0,
+          transform: 'translateX( -10px)'
+        }),
+        stagger(-30, animate(200))
+      ]))
+    ] )
   ]
 })
 export class AppComponent {
