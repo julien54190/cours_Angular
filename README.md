@@ -84,6 +84,10 @@
 - 05.Headers et gestion d
 - 06.Usages  avancés
 
+# 10.animations
+
+- 01.Les fonctions trigger
+
 
 
 
