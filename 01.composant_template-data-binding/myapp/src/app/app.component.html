@@ -1,0 +1,106 @@
+
+{{title}}
+<hr>
+{{nombre}}
+<hr>
+{{bool}}
+<hr>
+{{obj.cle}}
+
+{{ 1 + 1}}
+
+{{suqare(2)}}
+
+<input type="text">
+<input [type]="inputType">
+
+<hr>
+
+<div
+class="square"
+[style.background]= "color"
+(click) ="changeColor('green')"
+(mouseenter)="changeColor('purple')"
+(mouseleave)="changeColor('red')"
+></div>
+
+<hr>
+
+<input type="text" [(ngModel)]="content">
+<hr>
+<p>{{ content }}</p>
+
+<br><br><br><br><br><hr>
+
+<button (click)="displayButton= !displayButton">button</button>
+<p *ngIf="displayButton"> Bonjour</p>
+
+<br><br><br><br><br><hr>
+
+<input type="text" [(ngModel)]= "color1">
+
+<div [ngStyle]="{
+  width: '200px',
+  height: '200px',
+  backgroundColor: color1
+}" ></div>
+
+<div
+  class="square" [style.background]="color1"
+></div>
+
+<div
+  [ngStyle]="{width: '200px', height: '200px'}"
+  [style.background]="color1"
+></div>
+<hr>
+<br><br><br><br><br><hr>
+
+<input type="text" [(ngModel)]= "color2" >
+
+<div
+  class="square"
+  [ngClass]="{
+    bluesquare : true,
+    redsquare : false
+  }"
+></div>
+
+<div
+  class="square"
+  [ngClass]="{
+    bluesquare : color2 === 'blue',
+    redsquare : color2 === 'red'
+  }"
+></div>
+
+<hr>
+
+<div
+class="square" [class.bluesquare]="color2 === 'blue'"
+[class.redsquare]="color2 === 'red'"
+></div>
+
+<hr>
+<br><br><br><br><br>
+
+<ul>
+  <li *ngFor="let user of users">{{user.nom}}</li>
+</ul>
+<hr>
+<div
+  *ngFor="let user of users; let i = index">{{i}} - {{user.nom}}
+</div>
+
+<hr>
+
+<button (click)="box = 'A' "> A </button>
+<button (click)="box = 'B' "> B </button>
+<button (click)="box = 'C' "> C </button>
+
+<div [ngSwitch]="box">
+  <h1 *ngSwitchCase="'A'">A</h1>
+  <h1 *ngSwitchCase="'B'">B</h1>
+  <h1 *ngSwitchCase="'C'">C</h1>
+  <h1 *ngSwitchDefault>Default</h1>
+</div>
