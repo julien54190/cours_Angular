@@ -1,4 +1,4 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import { animate, group, keyframes, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 
 @Component({
@@ -17,24 +17,46 @@ import { Component } from '@angular/core';
         border: 'none',
         borderRadius: '50%'
       })),
-      transition('normal <=> wild', animate(1000)),
+      //transition('normal <=> wild', animate(1000)),
       //transition(':enter', animate(1000)),
       //transition(':enter', animate("1s 1s ease-in")), // animate("durée commancement style animation"))
-      transition(':enter', [
-        style({
-          backgroundColor: 'blue',
-        }),
-        animate(400)
-      ]),
+      // transition(':enter', [
+      //   style({
+      //     backgroundColor: 'blue',
+      //   }),
+      //   animate(400)
+      // ]),
 
       //transition(' * => *', animate(1000)), * fait réference a tout les états.
       //transition(' void => normal', animate(1000)), on part de rien vers normal sois l'animation s'enclanche direct pour afficher normal.
       //transition(' void => *', animate(1000)), == transition(':enter', animate(1000))
       //transition(' * => void', animate(1000)), == transition(':leave', animate(1000))
       //transition('wild => normal', animate(200))
+
+      //transition('normal => wild', animate(2000,
+      //   keyframes([
+      //   style({ backgroundColor: "yellow", offset: 0}),
+      //   style({ backgroundColor: "green", offset: 0.2}),
+      //   style({ backgroundColor: "blue", offset: 0.4}),
+      //   style({ backgroundColor: "orange", offset: 0.6}),
+      //   style({ backgroundColor: "teal", offset: 0.8}),
+      // ])
+      //))
+
+      transition("normal => wild",
+      group([
+        animate(1000, style ({
+          borderRadius: '50%'
+        })),
+        animate(5000, style({
+          backgroundColor: "red"
+        })),
+      ])
+      )
     ])
   ]
 })
 export class AppComponent {
-  public state = "wild";
+  //public state = "wild";
+  public state = "normal";
 }
