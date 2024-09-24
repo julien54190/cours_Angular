@@ -16,7 +16,11 @@ class="container f-flex flex-column flex-justify-content flex-align-items-center
 style="padding-top: 100px;"
 >
   <div class="w-100 d-flex flex-row flex-justify-content-center">
-    <ul @list>
+    <ul *ngIf="display"
+    @list
+    (@list.start)="toggle($event)"
+    (@list.done)="toggle($event)"
+    >
       <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
       <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
       <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>

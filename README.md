@@ -15,6 +15,7 @@
 
 
 
+
 # 01.composant_template-data-binding
 
 # 02.approffondissment_Composant
@@ -105,6 +106,7 @@
 - 02.Les fonctions transition et animate
 - 03.Les keyframes et les groups
 - 04.Query et stagger
+- 05.Start et done
 
 
 

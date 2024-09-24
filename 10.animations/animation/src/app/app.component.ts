@@ -1,4 +1,4 @@
-import { animate, group, keyframes, query, stagger, state, style, transition, trigger } from '@angular/animations';
+import { animate, group, keyframes, query, stagger, state, style, transition, trigger, AnimationEvent } from '@angular/animations';
 import { Component } from '@angular/core';
 
 @Component({
@@ -60,7 +60,16 @@ import { Component } from '@angular/core';
           opacity: 0,
           transform: 'translateX( -10px)'
         }),
-        stagger(-30, animate(200))
+        stagger(-300, animate(2000))
+      ])),
+      transition(":leave",
+      query('li', [
+        stagger(-300, animate(2000,
+          style({
+            opacity: 0,
+            transform: 'translateX(10px)'
+          }),
+          ))
       ]))
     ] )
   ]
@@ -68,4 +77,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   //public state = "wild";
   public state = "normal";
+
+  public display = true;
+
+  public toggle(event: AnimationEvent) {
+    if (event.phaseName === 'done') {
+      this.display = !this.display;
+    }
+
+  }
+
 }
