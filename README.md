@@ -52,7 +52,20 @@
 - 12.Le garde canDeactivate
 - 13.Le garde resolver
 
+# 07.les formulaires
 
+- 01.Introduction aux ReactiveForm
+- 02.Création d'un formulaire réactif
+- 03.L'API de FormControl et FormGroup
+- 04.Value et Reset
+- 05.Les validateurs
+- 06.Les messages d'erreur
+- 07.Les classes et états des abstractControls
+- 08.Les formGroups imbriqués
+- 09.FormArray
+- 10.FormBuilder
+- 11.FormGroup et EventEmitter
+- 12.Cases à cocher
 
 
 

@@ -1,0 +1,87 @@
+<hr />
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="d-flex flex-column form-group">
+      <label>Nom</label>
+      <input
+        formControlName="nom"
+        type="text"
+        name="name"
+        placeholder="prénom nom"
+      />
+    </div>
+    <div class="d-flex flex-column form-group">
+      <label>Email</label>
+      <input
+        formControlName="email"
+        type="email"
+        name="email"
+        placeholder="adresse email"
+      />
+    </div>
+    <div formArrayName="hobbies" class="d-flex flex-column form-group">
+      <label>Hobbies</label>
+      <button class="btn btn-primary" (click)="addHobby()">
+        Ajouter hobby
+      </button>
+        <div *ngFor="let hobby of hobbies.controls; let index = index">
+          <input
+            style="margin-top: 5px;"
+            type="text"
+            [formControlName]="index"
+          />
+          <span class="delete" (click)="deleteHobby(index)">&#10060;</span>
+      </div>
+    </div>
+    <div class="d-flex flex-column form-group">
+      <label>Mot de passe</label>
+      <input
+        formControlName="password"
+        type="password"
+        name="password"
+        placeholder="mot de passe"
+      />
+    </div>
+    <div class="d-flex flex-column form-group">
+      <label>
+        Male
+        <input type="radio" value="male" formControlName="gender">
+      </label>
+      <label>
+        Female
+        <input type="radio" value="female" formControlName="gender">
+      </label>
+    </div>
+    <div class="d-flex flex-column form-group">
+      <label>
+        Êtes vous majeur ?
+        <input type="checkbox" formControlName="majeur">
+      </label>
+    </div>
+    <div class="d-flex flex-column form-group">
+      <label>
+        Votre ville
+      <select formControlName="city">
+        <option *ngFor="let city of cites" [value]="city.value">{{ city.label }}</option>
+      </select>
+    </label>
+    </div>
+    <div class="btn">
+      <button type="submit" class="btn btn-primary">Inscription</button>
+    </div>
+  </form>
+</div>
+<hr />
+<div class="container">
+  <p>Value: {{ form.value | json }}</p>
+</div>
+
+<!--
+//   public form: FormGroup
+// = new FormGroup({
+//   nom: new FormControl('', Validators.required),
+//   email: new FormControl('', [Validators.required, Validators.email]),
+//   hobbies: new FormArray([]),
+//   password: new FormControl('')
+// });
+-->
