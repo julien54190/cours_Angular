@@ -1,0 +1,7 @@
+<h3 class="m-10">Liste des aliments : </h3>
+<ul class="list-primary m-10">
+  <li
+  (click)="removeAliment(index)"
+  *ngFor="let aliment of aliments; let index = index"
+  >{{ aliment }}</li>
+</ul>
