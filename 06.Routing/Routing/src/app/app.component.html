@@ -1,0 +1,14 @@
+<div class="container d-flex flex-column" style="padding-top: 150px;">
+  <nav>
+    <ul>
+      <li routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact : true }">Homepage</li>
+      <!-- <li routerLink="/users">Users</li> -->
+      <li [routerLink]="['users']" [queryParams]="{details : true}" routerLinkActive="active">Users</li>
+      <!-- le biding [] sert quand on utilise des caracteristique JS et non html ici utile car on users on peut donner plus de parametre comme ID, sexe... -->
+      <!-- [queryParams]="{details : true} sers quand on utilise le router d'un component dans un autre component -->
+    </ul>
+  </nav>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

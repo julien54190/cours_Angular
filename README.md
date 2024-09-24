@@ -36,6 +36,25 @@
 -  02.Utilisation des Subjects
 - 03.Operateur et pipes
 
+# 06.Routing
+
+- 01.Introduction et mise en place
+- 02.Les bases du Router Angular
+- 03.La directive RouterLink
+- 04.La directive RouterLinkActive
+- 05.Le service Router
+- 06.ActivateRoute et params
+- 07.QueryParams
+- 08.Les routes imbriquées et préservation des paramètres optionnels
+- 09.Redirection et wildcard
+- 10.Séparation des routes
+- 11.Le garde canActivate
+- 12.Le garde canDeactivate
+- 13.Le garde resolver
+
+
+
+
 
 
 
