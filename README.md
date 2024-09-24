@@ -87,6 +87,7 @@
 # 10.animations
 
 - 01.Les fonctions trigger
+- 02.Les fonctions transition et animate
 
 
 
