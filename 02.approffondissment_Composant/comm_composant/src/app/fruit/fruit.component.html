@@ -1,0 +1,13 @@
+<!-- <li (click)="deleteFruit()">{{ fruit }} </li> -->
+
+<li class="d-flex flex-align flex-justify-content-between" >
+  <span>{{ fruit }} </span>
+  <button #ref (click)="deleteFruit()" class="btn btn-primary">Supprimer</button>
+</li>
+
+<!-- ng-content -->
+
+<!-- <li class="d-flex flex-align flex-justify-content-between" >
+  <ng-content></ng-content>
+  <button (click)="deleteFruit()" class="btn btn-primary">Supprimer</button>
+</li> -->

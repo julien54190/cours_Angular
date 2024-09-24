@@ -1,0 +1,67 @@
+<!-- Leçon 1 -->
+<!-- <div class="container d-flex flex-column" style="height: 100vh; padding-top: 150px;">
+  <div class="d-flex flex-row">
+    <input class="m-10 flex-fill" type="text" [(ngModel)]="fruit">
+    <button class="btn btn-primary m-10" (click)="addFruit()">Ajouter</button>
+  </div>
+  <ul class="list-primary m-10">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+</div> -->
+
+<!-- Leçon 2 -->
+<!-- <div class="container d-flex flex-column" style="height: 100vh; padding-top: 150px;">
+  <div class="d-flex flex-row">
+    <input class="m-10 flex-fill" type="text" [(ngModel)]="fruit">
+    <button class="btn btn-primary m-10" (click)="addFruit()">Ajouter</button>
+  </div>
+  <ul class="list-primary m-10">
+    <app-fruit
+    (deleteF)="deleteFruit($event)"
+    [fruit]="f"
+    *ngFor="let f of fruits">
+  </app-fruit>
+  </ul>
+</div> -->
+
+<!-- Réferance local -->
+
+<!-- <div class="container d-flex flex-column" style="height: 100vh; padding-top: 150px;">
+  <div class="d-flex flex-row">
+    <input #myinput class="m-10 flex-fill" type="text">
+    <button class="btn btn-primary m-10" (click)="addFruit(myinput)">Ajouter</button>
+  </div>
+  <ul class="list-primary m-10">
+    <app-fruit
+    (deleteF)="deleteFruit($event)"
+    [fruit]="f"
+    *ngFor="let f of fruits">
+  </app-fruit>
+  </ul>
+</div> -->
+
+<!-- @ViewChild et @ViewChildren -->
+
+<div class="container d-flex flex-column" style="height: 100vh; padding-top: 150px;">
+  <div class="d-flex flex-row">
+    <input #myinput class="m-10 flex-fill" type="text">
+    <button class="btn btn-primary m-10" (click)="addFruit()">Ajouter</button>
+  </div>
+  <!-- <app-fruit #fruit (deleteF)="deleteFruit($event)" fruit="fraise"></app-fruit>   premiere partie @Viewchild-->
+  <ul class="list-primary m-10">
+    <app-fruit
+    #fruit
+    (deleteF)="deleteFruit($event)"
+    [fruit]="f"
+    *ngFor="let f of fruits">
+
+    <!-- ng-content -->
+    <!-- {{f}} uhcencldfjhb -->
+
+    <!-- ContentChild -->
+    <p #ref>{{ f }}</p>
+  </app-fruit>
+  </ul>
+</div>
