@@ -1,5 +1,20 @@
 # cours_Angular
 
+# Sommaire
+
+1. [01. Composant et Template - Data Binding](#01composant_template-data-binding)
+2. [02. Approfondissement des Composants](#02approffondissment_composant)
+3. [03. Approfondissement des Directives](#03approfondissement_directive)
+4. [04. Services et Injection de Dépendances](#04service_injection_dépendence)
+5. [05. Les Observables](#05les-observables)
+6. [06. Routing](#06routing)
+7. [07. Les Formulaires](#07les-formulaires)
+8. [08. Les Pipes](#08les_pipes)
+9. [09. Requêtes HTTP](#09requette_http)
+10. [10. Animations](#10animations)
+
+
+
 # 01.composant_template-data-binding
 
 # 02.approffondissment_Composant
