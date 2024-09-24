@@ -1,0 +1,20 @@
+<div
+  class="container d-flex flex-column flex-justify-content-center flex-align-items-center"
+  style="padding-top: 200px;"
+
+>
+  <!-- <p>{{ nom | uppercase}}</p><br>
+  <p>{{ date1 | date:"long" }}</p><br>
+  <p>{{ date1 | date:"medium" }}</p><br>
+  <p>{{ date1 | date:"short" }}</p><br>
+  <p>{{ date1 | date:"dd MM Y" }}</p><br>
+  <p>{{ date1 | date:"dd MMMM YY" }}</p><br>
+  <p>{{ date2 | date }}</p> -->
+
+  <!-- <p>{{ '1111 2222 3333 4444' | cb: 2 }}</p> le param 2 change la valeur de n qui est defini dans le cb.pipe.ts -->
+    <button (click)="addName('Louisa')" class="m-10"> Ajouter Louisa</button>
+  <input type="text" [(ngModel)]="search">
+  <app-user-list [names]="names$ | async" [search]="search"></app-user-list>
+
+</div>
+

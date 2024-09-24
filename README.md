@@ -67,6 +67,14 @@
 - 11.FormGroup et EventEmitter
 - 12.Cases à cocher
 
+# 08.Les_Pipes
+
+- 01.Introduction aux pipes
+- 02.Utiliser les pipes
+- 03.Créer un pipe personnalisé
+- 04.Pipes purs et impurs
+- 05.Le pipe asynchrone
+
 
 
 
